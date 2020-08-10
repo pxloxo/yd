@@ -1,0 +1,62 @@
+.floList header {
+    height: 1rem;
+    background-color: orange;
+}
+
+.floList header p {
+    line-height: 1rem;
+    text-align: center;
+    font-size: 0.4rem;
+    color: #fff;
+}
+
+.flList main {
+    display: flex;
+}
+
+.flList main .flList-left {
+    width: 2rem;
+}
+
+.flList main .flList-rigth {
+    flex: 1;
+}
+
+.flList main .flList-left ul li {
+    height: 0.8rem;
+    border-left: 5px solid #F5F5F9;
+    line-height: 0.8rem;
+    text-align: center;
+}
+
+.flList main .flList-left ul li.active {
+    border-left: 5px solid blue;
+    color: orange;
+}
+
+.flList main .flList-rigth ul li {
+    height: 2rem;
+    width: 2rem;
+    float: left;
+    border: 1px solid #1D84A7;
+    margin-left: 0.4rem;
+    position: relative;
+    margin-top: 0.4rem;
+    border-radius: 0.2rem;
+    overflow: hidden;
+}
+
+.flList main .flList-rigth ul li img {
+    height: 2rem;
+    width: 2rem;
+}
+
+.flList main .flList-rigth ul li p {
+    width: 100%;
+    text-align: center;
+    line-height: 0.4rem;
+    position: absolute;
+    bottom: 0;
+    background-color: #1D84A7;
+    color: white;
+}
