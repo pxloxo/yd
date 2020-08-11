@@ -22,7 +22,6 @@ class FlList extends Component {
     render() {
         let { n } = this.state
         let { flList } = this.props
-        // console.log(proList[n].children);
         return (
             <div className="flList">
                 <header>

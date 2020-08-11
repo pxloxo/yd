@@ -7,7 +7,7 @@ import {withRouter} from "react-router-dom"
 function List(props) {
     let { flxInfo } = props;    
     const getDetail = (id) => {
-        props.history.push("/FlDetail/?id=" + id)
+        props.history.push("/flDetail/?id=" + id)
     }
     return (
         <div className="list">

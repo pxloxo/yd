@@ -25,7 +25,6 @@ class Home extends Component {
     }
 }
 const mapStateToProps = (state) => {
-    // console.log(state);
     return {
         flxInfo: flxInfo(state),
         banner: banner(state)

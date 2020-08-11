@@ -52,7 +52,7 @@ export default class FlxInfo extends Component {
                                     flxInfo.length > 0 ?
                                     flxInfo.map(item => {
                                             return (
-                                                <Link to={"/FlDetail/?id=" + item.id} key={item.id}>
+                                                <Link to={"/flDetail/?id=" + item.id} key={item.id}>
                                                     <li >
                                                         <div>
                                                             <img src={item.img} alt="" />

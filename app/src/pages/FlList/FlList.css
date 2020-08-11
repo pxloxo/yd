@@ -3,15 +3,22 @@
     background-color: orange;
 }
 
-.floList header p {
-    line-height: 1rem;
-    text-align: center;
-    font-size: 0.4rem;
+.flList header p {
+    width: 100%;
+    height: 1rem;
+    background-color: orange;
     color: #fff;
+    font-size: 0.4rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    text-align: center;
+    line-height: 1rem;
 }
 
 .flList main {
     display: flex;
+    margin-top: 1rem;
 }
 
 .flList main .flList-left {

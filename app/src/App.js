@@ -2,7 +2,8 @@ import React from 'react';
 import { Switch, Route, Redirect } from "react-router-dom"
 //懒加载
 import lazyLoad from "./util/lazyLoad"
-
+// 路由拦截
+import MyRoute from "./pages/MyRoute/MyRoute"
 
 const Login = lazyLoad(() => import("./pages/Login/Login"))
 const Register = lazyLoad(() => import("./pages/Register/Register"))
