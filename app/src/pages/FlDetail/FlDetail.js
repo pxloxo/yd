@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
 import querystring from "querystring"
+import { requestAddCart } from '../../util/request'
 import "./FlDetail.css"
 import { filterPrice } from "../../filter"
+import { Toast } from "antd-mobile"
 import { connect } from 'react-redux'
 import { flDetail, requestFlDetailAction } from '../../store'
 class FlDetail extends Component {
@@ -38,11 +40,27 @@ class FlDetail extends Component {
         this.refs.attr.children[index].className = "active"
     }
     //加入购物车
-   
+    add(id) {
+        let uid = sessionStorage.getItem("uid");
+        requestAddCart({
+            uid: uid,
+            goodsid: id,
+            num: 1
+        }).then(res => {
+            if (res.data.code === 200) {
+                Toast.info(res.data.msg)
+                this.setState({
+                    show: !this.state.show
+                })
+            } else {
+                Toast.info(res.data.msg)
+            }
+        })
+
+    }
     render() {
         let { show } = this.state
         let { detail } = this.props
-        console.log(detail);
         if (detail.description && this.refs.des) {
             this.refs.des.innerHTML = detail.description;
         }
@@ -117,4 +135,4 @@ const mapDispatchToProps = (dispatch) => {
 }
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(FlDetail)
+export default connect(mapStateToProps, mapDispatchToProps)(FlDetail)                              

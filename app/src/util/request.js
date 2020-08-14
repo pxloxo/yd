@@ -74,7 +74,7 @@ export const requestFlxInfo = (params) => {
     })
 }
 //购物车列表
-export const requestCarList = (params) => {
+export const requestCartList = (params) => {
     return axios({
         url: "api/cartlist",
         method: "get",
